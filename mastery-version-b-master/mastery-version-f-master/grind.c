@@ -33,7 +33,12 @@ grind_state_t grind(struct Parser* parser) {
             bool freed = false;
             while (itr != NULL) {
                 if (itr->index == parser->index) {
+                    if(prev == NULL){
+                        allocs[hash(parser->index)] = itr->next;
+                    }
+                    else{
                     prev->next = itr->next;
+                    }
                     free_grind_elem(&itr);
                     freed = true;
                     break;
@@ -61,10 +66,11 @@ void print_grinder() {
 }
 
 static bool print_and_free_list(struct grind_elem* head) {
-    struct grind_elem* itr = head;
-    if (head == NULL) {
+      if (head == NULL) {
         return false;
     }
+    struct grind_elem* itr = head;
+  
     while (itr != NULL) {
         struct grind_elem* next = itr->next;
         printf("Uh Oh! %ld Bytes Leaked From Line: %d\n", itr->size, itr->index);
