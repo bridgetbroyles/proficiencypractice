@@ -1,0 +1,8 @@
+    1  run testcases/err_ops.s
+    2  q
+    3  run testcases/basic_add.s 
+    4  bt
+    5  q
+    6  run testcases/basic_add.s
+    7  q
+    8  show commands
