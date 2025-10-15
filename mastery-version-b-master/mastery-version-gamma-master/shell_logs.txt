@@ -1,0 +1,500 @@
+   29  gdb bin/ci
+   30  grep print_lexed_tokens
+   31  make
+   32  bin/ci testcases/week3/eor_err_invalid_args3.s
+   33  ./ci testcases/week3/eor_err_invalid_args3.s
+   34  ./bin/ci testcases/week3/eor_err_invalid_args3.s
+   35  ./bin/ci -i  testcases/week3/eor_err_invalid_args3.s
+   36  make
+   37  ./bin/ci -i  testcases/week3/eor_err_invalid_args3.s
+   38  make
+   39  ./bin/ci -i  testcases/week3/eor_err_invalid_args3.s
+   40  make
+   41  make clean
+   42  make
+   43  ./bin/ci -i  testcases/week3/eor_err_invalid_args3.s
+   44  make clean && make
+   45  ./bin/ci -i  testcases/week3/eor_err_invalid_args3.s
+   46  make clean && make
+   47  ./run_tests.sh 
+   48  git add .
+   49  git commit -m "75/81"
+   50  git push
+   51  make clean && make
+   52  ./run_tests.sh 
+   53  make clean && make
+   54  ./run_tests.sh 
+   55  make
+   56  ./run_tests.sh 
+   57  make
+   58  make
+   59  ./run_tests.sh 
+   60  make
+   61  ./run_tests.sh 
+   62  git add .
+   63  git commit -m "80/81"
+   64  git push
+   65  git push
+   66  make
+   67  make
+   68  ./run_tests.sh 
+   69  make
+   70  ./run_tests.sh 
+   71  git add .
+   72  git commit -m "81/81"
+   73  git push
+   74  cd ci-lab-bridgetbroyles/
+   75  ls
+   76  make
+   77  make testcases/week3
+   78  make test_week3
+   79  ./run_tests.sh u
+   80  ./run_tests.sh 
+   81  ./run_tests.sh 2
+   82  ./run_tests.sh 3
+   83  cd ci-lab-bridgetbroyles/
+   84  make
+   85  ./run_tests.sh 
+   86  git add .
+   87  git commit -m "final copy/week3"
+   88  git push
+   89  cd ci-lab-bridgetbroyles/
+   90  make
+   91  ./run_tests.sh 
+   92  make
+   93  make week3
+   94  make testcasesweek3
+   95  make 3
+   96  ./run_tests.sh 
+   97  make 
+   98  ./run_tests.sh 
+   99  git add .
+  100  git commit -m "7/25"
+  101  git push
+  102  make
+  103  ./run_tests.sh 
+  104  make
+  105  make week3
+  106  make clean
+  107  make week3
+  108  make test3
+  109  ./run_tests.sh 
+  110  make
+  111  ./run_tests.sh 
+  112  git add .
+  113  git commit -m "29/35"
+  114  git push
+  115  make
+  116  ./run_tests.sh 
+  117  make test_week3
+  118  make test_week4
+  119  git add . 
+  120  git commit -m "33/35"
+  121  git push
+  122  make
+  123  ./run_tests.sh 
+  124  make
+  125  ./run_tests.sh 
+  126  make
+  127  ./run_tests.sh 
+  128  make
+  129  ./run_tests.sh 
+  130  git pull
+  131  make
+  132  ./run_tests.sh 
+  133  git add .
+  134  git commit -m "34/35"
+  135  git push
+  136  cd ci-lab-bridgetbroyles/
+  137  make
+  138  ls
+  139  ./testcases/week4/sqrt.s
+  140  ./run_tests.sh 
+  141  make clean
+  142  make debug
+  143  valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes   --error-exitcode=1 ./ci path/to/sqrt.s
+  144  valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes \ --error-exitcode=1 ./testcases/week4/sqrt.s
+  145  gdb bin/ci
+  146  bin/ci -i testcases/week4/sqrt.s
+  147  mak
+  148  make
+  149  bin/ci -i testcases/week4/sqrt.s
+  150  bin/ci -i testcases/week4/sqrt.s 2> debug.log
+  151  gdb --args bin/ci testcases/week4/sqrt.s
+  152  gdb --args ./bin/ci testcases/week4/sqrt.s
+  153  make clean
+  154  CFLAGS="-g -O1 -fsanitize=address,undefined -fno-omit-frame-pointer" make
+  155  ./bin/ci -i testcases/week4/sqrt.s 2>&1 | sed -n '1,400p' > asan_out.txt
+  156  ./bin/ci -i testcases/week4/sqrt.s 2>&1 | sed -n '1,400p' > asan_out.txt
+  157  make clean
+  158  make debug
+  159  make clean
+  160  make
+  161  valgrind --leak-check=full --track-origins=yes --show-leak-kinds=all   ./bin/ci -i testcases/week4/sqrt.s 2>&1 | sed -n '1,400p' > valgrind_out.txt || true
+  162  sed -n '1,400p' valgrind_out.txt
+  163  make
+  164  make
+  165  make
+  166  ./run_tests.sh 
+  167  make
+  168  ./run_tests.sh 
+  169  git add .
+  170  git commit -m "no leak 34/35"
+  171  make clean
+  172  git add .
+  173  git commit -m "no leak 34/35"
+  174  git push
+  175  make
+  176  ./run_tests.sh 
+  177  make
+  178  make
+  179  ./run_tests.sh 
+  180  make
+  181  ./run_tests.sh 
+  182  git add .
+  183  git commit -m "done"
+  184  git push
+  185  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  186  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  187  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  188  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  189  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  190  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  191  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles.git
+  192  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles.git
+  193  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  194  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  195  git clone https://github.com/CS429-FA2025/mm-lab-bridgetbroyles
+  196  ls
+  197  cd mm-lab-bridgetbroyles/
+  198  ls
+  199  cd mm-lab-bridgetbroyles/
+  200  ls
+  201  python3 driver.py -w1
+  202  ./bump_test
+  203  ls
+  204  make clean && make
+  205  python3 driver.py -w1
+  206  make clean && make
+  207  python3 driver.py -w1
+  208  make clean && make
+  209  python3 driver.py -w1
+  210  make clean && make
+  211  python3 driver.py -w1
+  212  git add .
+  213  git commit -m "basis" 
+  214  git push
+  215  git push
+  216  cd mm-lab-bridgetbroyles/
+  217  cd mm-lab-bridgetbroyles/
+  218  make
+  219  ./driver.py 
+  220  python3 driver.py -w1
+  221  git add .
+  222  git commmit -m "new driver.py" 
+  223  git commit -m "new driver.py" 
+  224  git push
+  225  git config
+  226  git help
+  227  git user
+  228  git --help
+  229  cd mm-lab-bridgetbroyles/
+  230  make
+  231  ./heap_runner 
+  232  python3 driver.py -w1
+  233  ./bump_test 
+  234  ./heap_runner 
+  235  gdb heap_runner.c
+  236  python3 driver.py -w1
+  237  make heap_runner
+  238  make debug
+  239  gdb ./heap_runner 
+  240  make debug
+  241  gdb ./heap_runner 
+  242  make debug
+  243  make debug
+  244  ./heap_runner 
+  245  make clean
+  246  make debug
+  247  gdb ./heap_runner 
+  248  make
+  249  make
+  250  make
+  251  make
+  252  ./heap_runner 
+  253  make
+  254  ./heap_runner 
+  255  make
+  256  make heap_runner
+  257  ./heap_runner 
+  258  gdb ./heap_runner 
+  259  make debug
+  260  gdb ./heap_runner 
+  261  ./heap_runner 
+  262  make debug
+  263  make
+  264  ./heap_runner 
+  265  gdb ./heap_runner 
+  266  make
+  267  ./heap_runner 
+  268  python3 driver.py -w1
+  269  ./bump_test
+  270  git add .
+  271  git commit -m "heap_runner fixed"
+  272  git push
+  273  python3 driver.py -w1
+  274  cd mm-lab-bridgetbroyles/
+  275  python3 driver.py -w1
+  276  make debug
+  277  ./runner -t traces/short2.rep -v
+  278  ./runner 
+  279  ./traces/week2
+  280  python3 driver.py -w2
+  281  python3 driver.py -w2
+  282  cd mm-lab-bridgetbroyles/
+  283  python3 driver.py -w2
+  284  python3 driver.py -w2
+  285  git add .
+  286  git commit -m "style and final coalesce"
+  287  git push
+  288  python3 driver.py -w2
+  289  python3 driver.py -w2
+  290  python3 driver.py -w2
+  291  make
+  292  make
+  293  git pull
+  294  make
+  295  python3 driver.py -w2
+  296  make
+  297  make
+  298  make
+  299  python3 driver.py -w2
+  300  git reset --hard origin/main
+  301  make
+  302  python3 driver.py -w2
+  303  git add .
+  304  git commit -m "different design test"
+  305  git push
+  306  clone https://github.com/bridgetbroyles/proficiencypractice.git
+  307  git clone https://github.com/bridgetbroyles/proficiencypractice.git
+  308  ls
+  309  del proficiencypractice/
+  310  rm proficiencypractice/
+  311  rmdir proficiencypractice/
+  312  rm -r  proficiencypractice/
+  313  ls
+  314  mkdir proficiency_practice
+  315  cd proficiency_practice/
+  316  git clone https://github.com/bridgetbroyles/proficiencypractice.git
+  317  ls
+  318  cd proficiencypractice/
+  319  ls
+  320  cd mastery-version-a-master/
+  321  ls
+  322  ls
+  323  git pull
+  324  ls
+  325  cd ..
+  326  cd mastery-version-b
+  327  cd mastery-version-b-master/
+  328  ls
+  329  cd ..
+  330  cd
+  331  ls
+  332  touch ~/.gdbinit
+  333  ls -a
+  334  echo "set history save on" >> ~/.gdbinit
+  335  cat /.gdbinit
+  336  cat ~/.gdbinit
+  337  cd proficiency_practice/proficiencypractice/
+  338  ls
+  339  cd mastery-version-b-master/
+  340  ls
+  341  make
+  342  make check
+  343  gdb ./mini_ci 
+  344  make debug
+  345  make clean
+  346  make debug
+  347  gdb ./mini_ci 
+  348  ls
+  349  make check
+  350  gdb ./mini_ci
+  351  make clean
+  352  make debug
+  353  gdb ./mini_ci
+  354  make debug
+  355  make check
+  356  make debug
+  357  make check
+  358  make debug
+  359  gdb mini_ci
+  360  ./mini_ci_reference
+  361  ./mini_ci_reference testcases/err_ops2.s
+  362  mini_ci_reference err_ops2.s
+  363  ls
+  364  make clean
+  365  make debug
+  366  make clean
+  367  make debug
+  368  gdb mini_ci
+  369  make debug
+  370  make check
+  371  mini_ci_reference testcases/basic_add.s 
+  372  make
+  373  make check
+  374  ./mini_ci testcases/multi_op_err2.s
+  375  gdb mini_ci
+  376  make check
+  377  cd ..
+  378  ls
+  379  cd mastery-version-c
+  380  cd mastery-version-c-master
+  381  ls
+  382  make check
+  383  gdb mini_ci
+  384  ./mini_ci_reference testcases/err_ops.s
+  385  chmod +x mini_ci_reference
+  386  ./mini_ci_reference testcases/err_ops.s
+  387  make check
+  388  gdb mini_ci
+  389  make debug
+  390  make check
+  391  gdb mini_ci
+  392  make check
+  393  make check
+  394  make chec
+  395  make check
+  396  touch ~/.gdbinit
+  397  echo "set history save on" >> ~/gdbinit
+  398  cat ~/.gdbinit
+  399  history > shell_logs.txt
+  400  ls
+  401  gdb
+  402  touch gdb_logs.txt
+  403  git add .
+  404  git commit -m "done"
+  405  git push
+  406  cd ..
+  407  ls
+  408  cd mastery-version-b-master
+  409  ls
+  410  cd mastery-version-e-master/
+  411  ls
+  412  make chekc
+  413  make check
+  414  chmod +x mini_ci_reference
+  415  make check
+  416  gdb mini_ci
+  417  make chekc
+  418  make check
+  419  make check
+  420  cd ..
+  421  touch ~/.gdbinit
+  422  echo "set save history on " >> ~/.gdbinit
+  423  cat ~/.gdbinit
+  424  make check
+  425  bin/a.out -t testcases/short1.rep
+  426  gdb bin/a.out 
+  427  make debug
+  428  make clean
+  429  make debug
+  430  gdb bin/a.out 
+  431  make check
+  432  make check
+  433  make comp
+  434  chmod +x ref.out
+  435  make comp
+  436  bin/a.out -t testcases/short1.rep
+  437  ref.out  -t testcases/short1.rep
+  438  gdb bin/a.out 
+  439  y
+  440  gdb ./bin/a.out 
+  441  make beug
+  442  make debug
+  443  gdb ./bin/a.out 
+  444  make debug
+  445  gdb ./bin/a.out 
+  446  make dbeug
+  447  make comp
+  448  make comp
+  449  git add .
+  450  git commit -m "done" 
+  451  git push
+  452  cd ..
+  453  ls
+  454  touch ~/gdbinit
+  455  echo "set history save on" >> ~/.gdbinit
+  456  cat ~/.gdbinit
+  457  > ~/.gdbinit
+  458  cat ~/.gdbinit
+  459  echo "set history save on" >> ~/.gdbinit
+  460  cat ~/.gdbinit
+  461  make comp
+  462  chmod +x ref.out
+  463  make comp
+  464  gdb bin/a.out 
+  465  make comp
+  466  gdb bin/a.out 
+  467  make debugs
+  468  make debug
+  469  make clean
+  470  make debug
+  471  gdb bin/a.out 
+  472  make debug
+  473  make comp
+  474  make comp
+  475  make comp
+  476  make comp
+  477  make comp
+  478  cd proficiency_practice/
+  479  ls
+  480  git pull
+  481  cd proficiencypractice/
+  482  git pull
+  483  cd mastery-version-b-master/
+  484  ls
+  485  pwd
+  486  make clean
+  487  make debug
+  488  mini_ci_reference testcases/err_ops2.s
+  489  ./mini_ci testcases/err_ops2.s
+  490  chmod +x mini_ci_reference
+  491  ./mini_ci testcases/err_ops2.s
+  492  mini_ci_reference testcases/err_ops2.s
+  493  make check
+  494  gdb mini_ci
+  495  make debug
+  496  make check
+  497  gdb mini_ci
+  498  make
+  499  make check
+  500  gdb mini_ci
+  501  make snow
+  502  make dopey
+  503  chmod +x trie_ref
+  504  make dopey
+  505  gdb trie.c
+  506  make debug
+  507  make clean
+  508  make debug
+  509  make happy
+  510  make doc
+  511  gdb trie.c
+  512  gdb ./trie.c
+  513  gdb bin/trie.o 
+  514  chmod +x trie.o
+  515  ls
+  516  cd bin
+  517  chmod +x trie.o
+  518  cd .
+  519  cd ..
+  520  gdb bin/trie.o 
+  521  gdb bin/second_trie -x testcases/dinosaurs.in 
+  522  gdb bin/second_trie 
+  523  make snow
+  524  make dopey
+  525  trie_ref -x testcases/dinosaurs.in 
+  526  make dopey
+  527  make grumpy
+  528  history > shell_logs.txt
